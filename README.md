@@ -18,6 +18,9 @@ The URL Shortener is a simple web application that allows users to shorten long 
 * JavaScript
 * SQLite
 
+# Get started
+pip install pipenv
+
 # License
 
 This project is licensed under the MIT License.
