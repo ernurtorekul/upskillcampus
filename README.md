@@ -28,7 +28,6 @@ Install Dependencies:
 
 Run the Application:
 `python manage.py runserver`
-```python manage.py runserver ```
 
 # License
 
