@@ -19,7 +19,15 @@ The URL Shortener is a simple web application that allows users to shorten long 
 * SQLite
 
 # Get started
-(`) pip install pipenv
+
+Clone the repository:
+`git clone https://github.com/ernurtorekul/url_shortener.git`
+
+Install Dependencies:
+`pip install -r requirements.txt`
+
+Run the Application:
+`python manage.py runserver`
 
 # License
 
