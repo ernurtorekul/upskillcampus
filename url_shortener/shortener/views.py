@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 import uuid
 from .models import URL
 from django.http import HttpResponse
+from serializers.shortener_serializer import URLSerializer
+from rest_framework import viewsets
+from rest_framework import generics
 # Create your views here.
 
 def index(request):
@@ -20,4 +23,12 @@ def create(request):
 def go(request, pk):
     url_details = URL.objects.get(uuid=pk)
     return redirect(url_details.link)   # 'https://' +
+
+class URLViewSet(viewsets.ModelViewSet):
+    queryset = URL.objects.all()
+    serializer_class = URLSerializer
+
+class CrudOperations(generics.RetrieveUpdateDestroyAPIView):
+    queryset = URL.objects.all()
+    serializer_class = URLSerializer
 
